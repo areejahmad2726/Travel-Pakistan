@@ -1,0 +1,13 @@
+<p>button works!</p>
+
+<button
+class="btn btn-outline-primary w-75"
+*ngIf="PublicButtonValue === 'Department'|| ShowButton === true"
+ngClass="PublicButtonValue === 'Department'?'btn-primary w-100'"
+value="Department"
+#ButtonValue
+(click)="GetButtonData(ButtonValue)"
+[disabled]="PublicButtonValue === 'Department'"
+>
+{{PublicButtonValue === 'Department' ? 'Assign To Department Has Been Selected' : 'Assign To Department'}}
+</button>
